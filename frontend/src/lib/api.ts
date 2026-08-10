@@ -1,6 +1,3 @@
-/* Thin client over the FastAPI backend. All requests go through the same-origin
-   /api/v1 proxy route, which forwards them to API_BASE_URL server-side. The JWT
-   lives in localStorage; every helper reads it from there so pages stay simple. */
 import { getSession } from "./session";
 
 export class ApiError extends Error {
@@ -116,6 +113,7 @@ export async function* chatStream(payload: unknown): AsyncGenerator<SseEvent> {
     }
   };
 
+   
   while (true) {
     const { done, value } = await reader.read();
     if (done) break;
