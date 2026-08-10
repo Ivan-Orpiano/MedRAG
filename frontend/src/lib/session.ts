@@ -15,7 +15,6 @@ export function getSession(): Session | null {
     return null;
   }
 }
-
 export function setSession(session: Session): void {
   window.localStorage.setItem(KEY, JSON.stringify(session));
 }
