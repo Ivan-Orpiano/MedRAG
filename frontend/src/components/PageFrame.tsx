@@ -64,6 +64,7 @@ export default function PageFrame({
           onClick={logout}
           className="rounded px-3 py-1 text-sm text-white hover:bg-blue-800"
         >
+          
           Log out
         </button>
       </header>
